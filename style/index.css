@@ -1,0 +1,182 @@
+
+/* co the doi mau -bs-success 
+hoat dong nhu mot bien chua mau
+vd: color: --bs-success: yellow.... */
+
+.header a.active{
+color: var(--bs-success)
+!important;
+}
+.header .navbar-nav{
+    gap: 10px;
+}
+
+.header .navbar-nav li{
+    position: relative;
+}
+
+.header .navbar-nav li::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    left: 5px;
+    background: green;
+    margin: auto;
+    display: block;
+    transition: all;
+}
+
+header .navbar-nav li:hover::after {
+    width: 85%;
+    transition: all 0.5s;
+    
+}
+
+
+.slider {
+    height: 800px;
+    
+}
+.slider .carousel-item .img-carousel{
+    max-height: 800px;
+}
+
+.slider .carousel-inner .carousel-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slider .carousel-inner .carousel-caption{
+    z-index: 2;
+}
+
+.header{
+    z-index: 10;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background: green !important;
+    width: 20px;
+    border-radius: 50%;
+}
+.carousel-indicators [data-bs-target]{
+    background: gray;
+    width: 20px;
+    border-radius: 50%;
+
+}
+.project .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--bs-success);
+}
+.project .card:hover .card-body{
+    border: 1px solid var(--bs-success) !important;
+    transition: border 0.5s;
+}
+
+
+.projects .tab-pane .card{
+    animation:display-zoom-item 1s ;
+}
+
+
+
+@keyframes display-zoom-item{
+    0%{
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.avalible{
+    background: url(/img/3.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 800px;
+
+}
+.overlay{
+    /*   0.5 la do trong suat cua hinh*/
+    background: rgba(0, 0, 0,.5);
+    min-height: 800px;
+    /* backdrop-filter: blur(5px); */
+
+}
+.avalible .card{
+    background: rgba(205, 205, 211, 0.5);
+    backdrop-filter: blur(5px);
+    transition: all 0.5s;
+}
+
+.avalible .card:hover{
+    cursor: pointer;
+    border: 1px solid #fff !important;
+    transition: all 0.5s;
+    background-color: black;
+
+}
+.Achivement{
+    /* them background thi sau url them dau , */
+    background:url(/img/memphis_3.png), url(/img/memphis_2.png);
+    background-position: bottom left, top right;
+    /* postiotion cung them dau phay */
+    background-size: 500px 100%, 500px 100%;
+    background-repeat: no-repeat, no-repeat;
+    padding: 50px;
+
+
+}
+.Achivement .card{
+    background-color: rgba(179, 172, 172, 0.5);
+    backdrop-filter: blur(5px);
+}
+.footer .fab{
+ transition: all 0.5s;
+}
+
+.footer .fab:hover{
+    cursor: pointer;
+    border: 1px solid green !important;
+    transition: all 0.5s;
+    color: green !important;
+}
+.slider .carousel-caption .img-profile{
+    animation: fade-up 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+    /* giu lau trang thai cua animation  */
+}
+
+.slider .carousel-caption h5{
+    animation: fade-up 1.5s;
+    animation-delay: 1s; 
+    opacity: 0;
+    animation-fill-mode: both;
+
+}
+.slider .carousel-caption p{
+    animation: fade-up 1.5s;
+    animation-delay: 2s; 
+    opacity: 0;
+    animation-fill-mode: both;
+
+}
+
+@keyframes fade-up{
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
