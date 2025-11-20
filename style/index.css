@@ -180,3 +180,9 @@ header .navbar-nav li:hover::after {
         opacity: 1;
     }
 }
+
+.text-slide{
+    animation: text-slide 1s;
+    opacity: 0;
+    animation-fill-mode: both;
+}
